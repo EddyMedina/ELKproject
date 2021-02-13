@@ -86,7 +86,7 @@ Start the container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Dockerps](Images/docker_ps_output.png)
+![Dockerps](https://github.com/EddyMedina/ELKproject/blob/main/Linux/DockerpsJPG.JPG)
 
 ### Target Machines & Beats
 
