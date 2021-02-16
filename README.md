@@ -88,6 +88,9 @@ Resize memory
 
 Start the container
 
+Note: 
+The ELK VM exposes an Elastic Stack instance. Docker is used to download and manage an ELK container. Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![Dockerps](https://github.com/EddyMedina/ELKproject/blob/main/Linux/Dockerps.JPG)
