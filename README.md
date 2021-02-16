@@ -189,6 +189,8 @@ $ ansible-playbook install_filebeat.yml webservers
 
 $ ansible-playbook install_metricbeat.yml webservers
 
-To verify success, wait five minutes to give ELK time to start up.
+ELK - To verify success, wait five minutes to give ELK time to start up.
 Then, run: curl http://10.0.0.8:5601. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console.
 
+WEB VMs - To verify sucess, wait five minutes to give web VMs time to start up.
+Then, run: curl 10.0.0.5/setup.php thiscommand should print HTML to the console. 
