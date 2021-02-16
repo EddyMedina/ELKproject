@@ -129,7 +129,8 @@ How do I specify which machine to install the ELK server on versus which to inst
 
 Which URL do you navigate to in order to check that the ELK server is running? The ELKs servers public IP.
 
-**Bonus**, Specific commands you need to run and download the playbook.
+##Bonus:
+Specific commands you need to run and download the playbook.
 
 To use the playbooks, we must perform the following steps:
 
@@ -139,6 +140,7 @@ To use the playbooks, we must perform the following steps:
 The easiest way to copy the playbooks is to use Git:
 
 $ cd /etc/ansible
+
 $ mkdir files
 
 $ git clone https://github.com/EddyMedina/ELKproject/blob/main/Ansible/ELKYML.txt
@@ -146,12 +148,14 @@ $ git clone https://github.com/EddyMedina/ELKproject/blob/main/Ansible/ELKYML.tx
 Move Playbooks and hosts file Into `/etc/ansible`
 
 $ cp project-1/playbooks/* .
+
 $ cp project-1/files/* ./files
 
 This copies the playbook files to the correct place.
 Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
 
 $ cd /etc/ansible
+
 $ cat > hosts <<EOF
 
 [webservers]
@@ -166,8 +170,11 @@ EOF
 After this, the commands below will run the playbook:
 
 $ cd /etc/ansible
+
 $ ansible-playbook install_elk.yml elk
+
 $ ansible-playbook install_filebeat.yml webservers
+
 $ ansible-playbook install_metricbeat.yml webservers
 
 To verify success, wait five minutes to give ELK time to start up.
