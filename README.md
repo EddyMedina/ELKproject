@@ -140,9 +140,11 @@ The easiest way to copy the playbooks is to use Git:
 
 $ cd /etc/ansible
 $ mkdir files
-"# Clone Repository + IaC Files
+
 $ git clone https://github.com/EddyMedina/ELKproject/blob/main/Ansible/ELKYML.txt
-# Move Playbooks and hosts file Into `/etc/ansible`
+
+Move Playbooks and hosts file Into `/etc/ansible`
+
 $ cp project-1/playbooks/* .
 $ cp project-1/files/* ./files
 
