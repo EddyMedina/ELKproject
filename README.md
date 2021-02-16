@@ -79,9 +79,13 @@ What is the main advantage of automating configuration with Ansible? You can aut
 The playbook implements the following tasks:
 
 Log in to ELK
+
 Install Docker
+
 Download Docker container
+
 Resize memory
+
 Start the container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
