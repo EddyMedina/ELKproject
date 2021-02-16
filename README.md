@@ -6,6 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML file may be used to install only certain pieces of it, such as Filebeat.
 
+The Playbook is duplicated below:
  ![ELK_PLAYBOOK](https://github.com/EddyMedina/ELKproject/blob/main/Ansible/Elk_Playbook_Insatall.JPG)
 
 This document contains the following details:
@@ -72,11 +73,11 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate the configuration of the ELK machine. No configuration was performed manually, which is advantageous because…
 
-- _TODO: What is the main advantage of automating configuration with Ansible? You can automate installation for multiple VMs
+What is the main advantage of automating configuration with Ansible? You can automate installation for multiple VMs
 
 The playbook implements the following tasks:
 
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image:
+In 5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image:
 
 Log in to ELK
 Install Docker
