@@ -91,10 +91,10 @@ The following screenshot displays the result of running `docker ps` after succes
 
 This ELK server is configured to monitor the following machines:
 
-List the IP addresses of the machines you are monitoring:
-
 Web-1 / 10.0.0.5
+
 Web-2 / 10.0.0.6
+
 Web-3 / 10.0.0.8
 
 We have installed the following Beats on these machines:
@@ -131,7 +131,7 @@ Which URL do you navigate to in order to check that the ELK server is running? T
 
 ## Bonus:
 
-Specific commands you need to run and download the playbook.
+### Specific commands you need to run and download the playbook.
 
 To use the playbooks, we must perform the following steps:
 
@@ -153,7 +153,10 @@ $ cp project-1/playbooks/* .
 $ cp project-1/files/* ./files
 
 This copies the playbook files to the correct place.
-Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
+
+Next, you must create a hosts file to specify which VMs to run each playbook on.
+
+Run the commands below:
 
 $ cd /etc/ansible
 
