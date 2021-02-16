@@ -165,9 +165,12 @@ $ cd /etc/ansible
 
 $ cat > hosts <<EOF
 
+Add IP address under webservers and elk.
+
 [webservers]
 
 10.0.0.5
+
 10.0.0.6
 
 [elk]
