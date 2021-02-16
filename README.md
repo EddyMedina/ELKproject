@@ -145,7 +145,7 @@ $ mkdir files
 
 $ git clone https://github.com/EddyMedina/ELKproject/blob/main/Ansible/ELKYML.txt 
 $ git clone https://github.com/EddyMedina/ELKproject/blob/main/Ansible/Filebeat_Playbook_Insatall.txt
-$ git clone
+$ git clone https://github.com/EddyMedina/ELKproject/blob/main/Ansible/Metricbeat_Playbook_Insatall.txt
 
 Move Playbooks and hosts file Into `/etc/ansible`
 
