@@ -129,13 +129,12 @@ How do I specify which machine to install the ELK server on versus which to inst
 
 Which URL do you navigate to in order to check that the ELK server is running? The ELKs servers public IP.
 
-## Bonus:
-
-### Specific commands you need to run and download the playbook.
+## Bonus: ### Specific commands you need to run and download the playbook.
 
 To use the playbooks, we must perform the following steps:
 
 -Copy the playbooks to the Ansible Control Node
+
 -Run each playbook on the appropriate targets
 
 The easiest way to copy the playbooks is to use Git:
@@ -163,13 +162,10 @@ $ cd /etc/ansible
 $ cat > hosts <<EOF
 
 [webservers]
-
 10.0.0.5
-
 10.0.0.6
 
 [elk]
-
 10.0.0.8
 
 EOF
