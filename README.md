@@ -100,7 +100,6 @@ Web-3 / 10.0.0.8
 We have installed the following Beats on these machines:
 
 Filebeat
-
 Metricbeat
 
 These Beats allow us to collect the following information from each machine:
