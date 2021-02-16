@@ -25,9 +25,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
 
-- _TODO: What aspect of security do load balancers protect? Availability
+What aspect of security do load balancers protect? Availability.
 
- What is the advantage of a jump box? Single point of entry.
+What is the advantage of a jump box? Single point of entry.
 
 The load balancer ensures that work to process incoming traffic will be shared by both vulnerable web servers. Access controls will ensure that only authorized users — namely, ourselves — will be able to connect in the first place.
 
@@ -57,7 +57,7 @@ Only the Jump box machine can accept connections from the Internet. Access to th
 
 Machines within the network can only be accessed by the Jump box. 
 
-- _TODO: Which machine did you allow to access your ELK VM? The Jump BoxAnsible container  IP 10.0.0.4 
+Which machine did you allow to access your ELK VM? The Jump BoxAnsible container  IP 10.0.0.4 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -73,11 +73,9 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate the configuration of the ELK machine. No configuration was performed manually, which is advantageous because…
 
-What is the main advantage of automating configuration with Ansible? You can automate installation for multiple VMs
+What is the main advantage of automating configuration with Ansible? You can automate installation for multiple VMs.
 
 The playbook implements the following tasks:
-
-In 5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image:
 
 Log in to ELK
 Install Docker
@@ -101,16 +99,14 @@ Web-3 / 10.0.0.8
 
 We have installed the following Beats on these machines:
 
-Specify which Beats you successfully installed:
-
 Filebeat
 Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
-filebeat collects and monitors log files from protected folders. User access the shadow file.
+filebeat collects and monitors log files from protected folders and user access the shadow file.
 
-Metricbeat Monitors resource usage. High CPU usage from bruteforce attack.
+Metricbeat Monitors resource usage and high CPU usage from bruteforce attack.
 
 
 ### Using the Playbook
@@ -121,17 +117,57 @@ SSH into the control node and follow the steps below:
 - Update the host file to include IP adresses
 - Run the playbook, and navigate to the VMs to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:
+Note the following:
 
--Which file is the playbook? YML file
+Which file is the playbook? YML file
 
 Where do you copy it? Playbooks directory
 
 Which file do you update to make Ansible run the playbook on a specific machine? The host file.
 
-How do I specify which machine to install the ELK server on versus which to install Filebeat on? Linking IP to a group.
+How do I specify which machine to install the ELK server on versus which to install Filebeat on? By Linking IP to a group.
 
 Which URL do you navigate to in order to check that the ELK server is running? The ELKs servers public IP.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+**Bonus**, Specific commands you need to run and download the playbook.
+
+To use the playbooks, we must perform the following steps:
+
+-Copy the playbooks to the Ansible Control Node
+-Run each playbook on the appropriate targets
+
+The easiest way to copy the playbooks is to use Git:
+
+$ cd /etc/ansible
+$ mkdir files
+# Clone Repository + IaC Files
+$ git clone https://github.com/yourusername/project-1.git
+# Move Playbooks and hosts file Into `/etc/ansible`
+$ cp project-1/playbooks/* .
+$ cp project-1/files/* ./files
+
+This copies the playbook files to the correct place.
+Next, you must create a hosts file to specify which VMs to run each playbook on. Run the commands below:
+
+$ cd /etc/ansible
+$ cat > hosts <<EOF
+
+[webservers]
+10.0.0.5
+10.0.0.6
+
+[elk]
+10.0.0.8
+
+EOF
+
+After this, the commands below will run the playbook:
+
+$ cd /etc/ansible
+$ ansible-playbook install_elk.yml elk
+$ ansible-playbook install_filebeat.yml webservers
+$ ansible-playbook install_metricbeat.yml webservers
+
+To verify success, wait five minutes to give ELK time to start up.
+Then, run: curl http://10.0.0.8:5601. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console.
 
