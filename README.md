@@ -117,6 +117,7 @@ filebeat collects and monitors log files from protected folders and user access 
 
 Metricbeat Monitors resource usage and high CPU usage from bruteforce attack.
 
+![Metric_dashboard](https://github.com/EddyMedina/ELKproject/blob/main/Ansible/Metricbeat_dashboard.JPG)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
