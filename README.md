@@ -113,6 +113,8 @@ These Beats allow us to collect the following information from each machine:
 
 filebeat collects and monitors log files from protected folders and user access the shadow file.
 
+![Filebeat_Dashboard](https://github.com/EddyMedina/ELKproject/blob/main/Ansible/Filebeat_dashboard.JPG)
+
 Metricbeat Monitors resource usage and high CPU usage from bruteforce attack.
 
 
